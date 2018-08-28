@@ -27,7 +27,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
     // })
 
     // Insert new doc into Users (name, age, location)
-    db.collection('Todos').insertOne({
+    db.collection('Users').insertOne({
         name: 'Wei Kee',
         age: 24,
         location: 'Singapore'

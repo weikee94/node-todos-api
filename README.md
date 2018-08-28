@@ -5,5 +5,8 @@ Init ToDo API
 - npm install mongodb --save 
 
 MongoDB InsertOne Example
-Robomongo (Robo 3T GUI)
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/mongodbinsertone.png "Mongodb InsertOne")
+
+Setting Up Mongoose
+- npm i mongoose --save
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/settingupmongoose.png "Setting Mongoose")
