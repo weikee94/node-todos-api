@@ -10,3 +10,6 @@ MongoDB InsertOne Example
 Setting Up Mongoose
 - npm i mongoose --save
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/settingupmongoose.png "Setting Mongoose")
+
+Validators, Types, Defaults
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/mongovalidator.png "Validators")
