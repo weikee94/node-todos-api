@@ -20,6 +20,16 @@ Validators, Types, Defaults
 Endpoint: POST /todos
 (body parser make string become js object)
 - npm i express body-parser --save 
-![Image](https://github.com/weikee94/node-todos-api/blob/master/images/todoapi.png "Todo API")
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/todoapi.png "POST todos")
+postman response
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/postmanone.png "Postman example")
 
+Testing: POST /todos
+- expect for assertions
+- mocha for the entire test suite
+- supertest to test out express routes
+- nodemon automatically restart the test suite
+- npm i expect mocha nodemon supertest --save-dev
 
+Endpoint: GET /todos
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/getapi.png "GET todos")
