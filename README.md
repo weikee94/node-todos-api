@@ -33,3 +33,6 @@ Testing: POST /todos
 
 Endpoint: GET /todos
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/getapi.png "GET todos")
+
+Mongoose Queries and ID Validation
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/idvalidation.png "Moogoose Queries and ID Validation")
