@@ -47,3 +47,13 @@ Deploy API to Heroku
 - heroku config (this will provide list of all configuration variables)
 - heroku logs (if error will show here)
 - git push heroku master (this push to heroku)
+- heroku open (shortcut to open in browser)
+
+update your port
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/updateport.png "Update port")
+
+heroku scripts and engine version
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/herokuscripts.png "Heroku scripts")
+
+update db uri
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/dburi.png "Update db uri")
