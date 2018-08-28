@@ -39,3 +39,11 @@ Mongoose Queries and ID Validation
 
 Endpoint: GET /todos/:id
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/getidapi.png "GET todos by id")
+
+Deploy API to Heroku
+- heroku create (this will create random name)
+- https://quiet-spire-99849.herokuapp.com/ 
+- heroku addons:create mongolab:sandbox
+- heroku config (this will provide list of all configuration variables)
+- heroku logs (if error will show here)
+- git push heroku master (this push to heroku)

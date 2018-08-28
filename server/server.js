@@ -11,6 +11,7 @@ var { User } = require('./models/user');
 
 // app store our express application
 var app = express();
+const port = process.env.PORT || 8080;
 
 // app dot use accept middleware params
 app.use(bodyParser.json());
@@ -67,8 +68,8 @@ app.get('/todos/:id', (req, res) => {
     })
 })
 
-app.listen(8080, () => {
-    console.log("Started on port 8080")
+app.listen(port, () => {
+    console.log(`Started on port ${port}`)
 });
 
 module.exports = {
