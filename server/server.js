@@ -1,5 +1,6 @@
 // root of the application
 var express = require('express');
+const { ObjectID } = require('mongodb');
 // body parser take json and convert it into an object
 var bodyParser = require('body-parser');
 
@@ -38,6 +39,33 @@ app.get('/todos', (req, res) => {
         res.status(400).send(e);
     })
 });
+
+// GET /todos/12341234
+app.get('/todos/:id', (req, res) => {
+    var id = req.params.id;
+
+    // validate id using isValid
+        // 404 - send back empty body
+    // findById
+        // success
+            // if todo - send back
+        // error
+            //  400 - send back empty
+    if (!ObjectID.isValid(id)) {
+        return res.status(404).send();
+    }
+
+    Todo.findById(id).then((todo) => {
+        if(!todo) {
+            return res.status(404).send();
+        }
+        res.send({
+            todo
+        })
+    }, (e) => {
+        res.status(400).send(e);
+    })
+})
 
 app.listen(8080, () => {
     console.log("Started on port 8080")

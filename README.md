@@ -36,3 +36,6 @@ Endpoint: GET /todos
 
 Mongoose Queries and ID Validation
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/idvalidation.png "Moogoose Queries and ID Validation")
+
+Endpoint: GET /todos/:id
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/getidapi.png "GET todos by id")
