@@ -62,6 +62,9 @@ postman environments
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/postmanenv1.png "Setup the postman environment variables")
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/postmanenv2.png "Trigger by dropdown")
 
+Endpoint: DELETE /todos/:id
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/deleteapi.png "Delete API")
+
 
 
 
