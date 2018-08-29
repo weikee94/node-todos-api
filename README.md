@@ -57,3 +57,14 @@ heroku scripts and engine version
 
 update db uri
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/dburi.png "Update db uri")
+
+postman environments
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/postmanenv1.png "Setup the postman environment variables")
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/postmanenv2.png "Trigger by dropdown")
+
+
+
+
+
+
+
