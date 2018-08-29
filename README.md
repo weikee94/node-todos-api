@@ -65,7 +65,9 @@ postman environments
 Endpoint: DELETE /todos/:id
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/deleteapi.png "Delete API")
 
-
+Endpoint: PATCH /todos/:id
+- npm i lodash --save
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/patchapi.png "Patch API")
 
 
 
