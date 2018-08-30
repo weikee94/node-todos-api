@@ -9,6 +9,7 @@ var { mongoose } = require('./db/mongoose');
 // models
 var { Todo } = require('./models/todo');
 var { User } = require('./models/user');
+var {authenticate} = require('./middleware/authenticate');
 
 // app store our express application
 var app = express();
@@ -144,6 +145,11 @@ app.post('/users', (req, res) => {
         res.header('x-auth', token).send(user)
     })
 
+})
+
+// this using middleware function authenticate
+app.get('/users/me', authenticate, (req, res) => {
+    res.send(req.user);
 })
 
 

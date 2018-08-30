@@ -89,7 +89,20 @@ Generating Auth Tokens and Setting Headers (Schema)
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/generateAuthToken.png "generate auth token")
 - use user schema in order to create instance method 
 - toJSON can override the return data
-![Image](https://github.com/weikee94/node-todos-api/blob/master/images/userSchema.png "user schema")
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/userschema.png "user schema")
+
+
+Private Routes and Auth Middleware
+- UserSchema.methods will create instance method
+- UserSchema.statics will create model method
+- UserSchema.findByToken is the model method get back the user by passing token
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/findByToken.png "model method")
+- auth middleware, middleware function next(), if not passing this the following function wont execute
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/authone.png "authentication middleware method")
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/authtwo.png "authentication middleware method")
+
+
+
 
 
 
