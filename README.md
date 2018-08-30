@@ -69,7 +69,12 @@ Endpoint: PATCH /todos/:id
 - npm i lodash --save
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/patchapi.png "Patch API")
 
+Setting User Model 
+Endpoint: POST /users
+- npm install validator --save 
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/usermodel.png "User model")
 
+JWTs and Hashing
 
 
 
