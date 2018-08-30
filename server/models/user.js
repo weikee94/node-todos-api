@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
-
 const validator = require('validator');
+const jwt = require('jsonwebtoken');
+const _ = require('lodash');
 
 // Example User Model
 // {
@@ -12,11 +13,8 @@ const validator = require('validator');
 //     }]
 // }
 
-
-
-// User 
-// email - require it - trim it - set type - set min length of 1
-var User = mongoose.model('User', {
+// Store a schema for user (same as what we do mongoose.model)
+var UserSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
@@ -43,7 +41,45 @@ var User = mongoose.model('User', {
             required: true
         }
     }]
-});
+})
+
+// this method modify the sent back data
+UserSchema.methods.toJSON = function () {
+    var user = this;
+    // taking mongoose variable to regular object
+    var userObject = user.toObject();
+
+    return _.pick(userObject, ['_id', 'email'])
+};
+
+// By using schema allow us to add instance methods
+// instance methods do have access to individual document
+// which is great because we need that information to create JWT
+UserSchema.methods.generateAuthToken = function () {
+    var user = this;
+
+    // need access and token values to create new token into document
+    var access = 'auth';
+
+    var data = {
+        _id: user._id.toHexString(), 
+        access 
+    }
+    // second params is secret words
+    var token = jwt.sign(data, 'helloworld').toString();
+    
+    user.tokens = user.tokens.concat([{
+        access,
+        token
+    }]);
+
+    return user.save().then(() => {
+        return token;
+    })
+}
+
+var User = mongoose.model('User', UserSchema);
+
 
 module.exports = { User }
 

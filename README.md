@@ -80,6 +80,16 @@ JWTs and Hashing
 - jwt.io (refer more jwt from the documentation)
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/jwt.png "JWT")
 
+Generating Auth Tokens and Setting Headers (Schema)
+- there are two methods (model method and instance method)
+- model method (Example: User.findByToken)
+- instance method (Example: user.generateAuthToken)
+- user.generateAuthToken (responsible for adding token to the individual user saving that and returning token)
+- call generateAuthToken method and add token to header
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/generateAuthToken.png "generate auth token")
+- use user schema in order to create instance method 
+- toJSON can override the return data
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/userSchema.png "user schema")
 
 
 

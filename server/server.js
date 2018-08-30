@@ -131,10 +131,17 @@ app.post('/users', (req, res) => {
     var user = new User(body);
 
     // save to db
-    user.save().then((user) => {
-        res.send(user);
+    user.save().then(() => {
+        // call instance method
+        // generating the token by calling method
+        // and adding it as a header
+        return user.generateAuthToken();
     }, (e) => { 
         res.status(400).send(e);
+    }).then((token) => {
+        // header take two arguments which are key value pairs
+        // x-auth is for custom header cuz using jwt scheme
+        res.header('x-auth', token).send(user)
     })
 
 })
