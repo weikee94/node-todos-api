@@ -75,6 +75,11 @@ Endpoint: POST /users
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/usermodel.png "User model")
 
 JWTs and Hashing
+- npm i crypto-js --save (hashing algorithms playground only)
+- npm i jsonwebtoken --save
+- jwt.io (refer more jwt from the documentation)
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/jwt.png "JWT")
+
 
 
 
