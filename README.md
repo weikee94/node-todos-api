@@ -115,6 +115,10 @@ Endpoint: DELETE /users/me/token
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/deleteone.png "delete")
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/deletetwo.png "delete")
 
+Private ToDoRoutes
+- add creator id in order to know who is the one create data
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/privateroutes.png "private routes")
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/privateroutestwo.png "private routes")
 
 
 
