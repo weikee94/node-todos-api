@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 const validator = require('validator');
 const jwt = require('jsonwebtoken');
 const _ = require('lodash');
+const bcrypt = require('bcryptjs');
 
 // Example User Model
 // {
@@ -98,6 +99,50 @@ UserSchema.statics.findByToken = function (token) {
         'tokens.access': 'auth'
     });
 }
+
+UserSchema.statics.findByCredentials = function (email, password) {
+    var User = this;
+
+    return User.findOne({email}).then((user) => {
+        if (!user) {
+            return Promise.reject();
+        }
+
+        return new Promise((resolve, reject) => {
+           // bcrypt compare to compare password and user password
+           bcrypt.compare(password, user.password, (err, res) => {
+               if (res) {
+                   resolve(user);
+               } else {
+                   reject()
+               }
+           })
+        })
+
+
+    })
+};
+
+UserSchema.pre('save', function (next) {
+    var user = this;
+    
+    if (user.isModified('password')) {
+        var password = user.password;
+        // take two arguments
+        // second is a callback
+        // first one is the number of round that u want use gen
+        bcrypt.genSalt(10, (err, salt) => {
+            // here got three arguments
+            // third argument hash is the one saved in database
+            bcrypt.hash(password, salt, (err, hash) => {
+                user.password = hash;
+                next();
+            })
+        })
+    } else {
+        next();
+    }
+})
 
 var User = mongoose.model('User', UserSchema);
 

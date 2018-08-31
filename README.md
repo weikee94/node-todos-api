@@ -101,6 +101,17 @@ Private Routes and Auth Middleware
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/authone.png "authentication middleware method")
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/authtwo.png "authentication middleware method")
 
+Hashing Password
+- npm i bcryptjs@2.3.0 --save
+- mongoose middleware let you run certain code before or after certain event like (pre, init)
+- https://mongoosejs.com/docs/middleware.html (refer this for more details)
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/hashpassword.png "hashpassword")
+
+Endpoint: POST/users/login
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/loginone.png "login model methods")
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/logintwo.png "login endpoints")
+
+
 
 
 
