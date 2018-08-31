@@ -128,4 +128,6 @@ Update App Configuration
 - heroku config:get JWT_SECRET
 - heroku config:unset JWT_SECRET 
 
-
+Deploying to Heroku and Mongo Production Database
+- heroku config:get MONGODB_URI (this will get the mongodb address)
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/database.png "database")
