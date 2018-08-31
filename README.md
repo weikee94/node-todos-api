@@ -111,7 +111,9 @@ Endpoint: POST/users/login
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/loginone.png "login model methods")
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/logintwo.png "login endpoints")
 
-
+Endpoint: DELETE /users/me/token
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/deleteone.png "delete")
+![Image](https://github.com/weikee94/node-todos-api/blob/master/images/deletetwo.png "delete")
 
 
 
