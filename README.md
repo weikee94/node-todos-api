@@ -120,6 +120,12 @@ Private ToDoRoutes
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/privateroutes.png "private routes")
 ![Image](https://github.com/weikee94/node-todos-api/blob/master/images/privateroutestwo.png "private routes")
 
-
+Update App Configuration
+- create server config file to store environment variables
+- heroku config (get mongodburi)
+- manipulate jwtsecret key on heroku
+- heroku config:set JWT_SECRET
+- heroku config:get JWT_SECRET
+- heroku config:unset JWT_SECRET 
 
 
